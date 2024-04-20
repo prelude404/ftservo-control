@@ -1,0 +1,9 @@
+<launch>
+    <arg name="modified_id" default="1"/> 
+    <arg name="port" default="/dev/ttyUSB0"/>
+
+    <node pkg="ftservoControl" type="initialize" name="initialize" output="screen" >
+        <param name="ftservo/id" value="$(arg modified_id)"/>
+        <param name="ftservo/serial" value="$(arg port)"/>
+    </node>
+</launch>

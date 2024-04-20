@@ -1,0 +1,12 @@
+<launch>
+    <group ns="servogroup78">
+    <node pkg="ftservoControl" type="singleServoControl" name="singleServoControl" output="screen" >
+        <param name="id_up" type="int" value="8" />
+        <param name="id_down" type="int" value="7" />
+        <param name="source_frame" type="string" value="EstimationfromcamD" />
+        <param name="target_frame" type="string" value="camD" />
+        <param name="cam" type="string" value="camD" />
+        <param name="serial" type="string" value="/dev/ttyUSB3" />
+    </node>
+    </group>
+</launch>
